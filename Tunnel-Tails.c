@@ -14,18 +14,19 @@
 ////////////////////////////////////////////////
 
 	int i;
-	char nome[50], opcao, destino, escolha, feito, pick, morrer, caminho , corrida, quase;
+	char nome[50], opcao, destino, escolha, feito, pick, morrer, caminho , corrida, quase; // por favor ignorem o nome das variaveis
+	// variaveis constantes
 	char ask_dis[] = "[DESABILITADO]";
 	char ask_menu[] = "[Menu Principal]";
 	char ask_continuar[] = "Clique em qualquer tecla para continuar.";
-	char ask_select[] = "Selecione umas das opÁıes";
+	char ask_select[] = "Selecione umas das op√ß√µes";
 	char ask_fazer[] = "O que deseja fazer?";
 	char ask_voltar[] = "Clique em qualquer tecla para voltar...";
-	char ask_erro[] = "ERROR:      Entrada Inv·lida ou indisponivel";
+	char ask_erro[] = "ERROR:      Entrada Inv√°lida ou indisponivel";
 	char ask_seguir[] = "Qual caminho deseja seguir?";
 
 ////////////////////////////////////////////////
-///////      Fuctions de utilit·rios     ///////
+///////      Fuctions de utilit√°rios     ///////
 ////////////////////////////////////////////////
 
 printTime() // tempo de print entre caracteres
@@ -40,14 +41,14 @@ pularlinha()
 
 kit_completo()
 {
-	system("cls");
-	fflush(stdin);
+	system("cls"); // limpa a tela
+	fflush(stdin); // limpa buffer de entrada
 }
 ////////////////////////////////////////////////
 ///////    Fuctions de Linhas das UI     ///////
 ////////////////////////////////////////////////
 
-ui_header(int i) // CabeÁ·rio
+ui_header(int i) // Cabe√ß√°rio
 {
 	printTime();
 	for(i = 0; i<=2; i++)
@@ -75,7 +76,7 @@ ui_mid(int linhas) // Mid varias linhas
 		printTime();
 		for(i = 0; i<=2; i++)
 		{
-			putchar('¶');
+			putchar('¬¶');
 		}
 		for(i = 0; i<=60; i++)
 		{
@@ -83,7 +84,7 @@ ui_mid(int linhas) // Mid varias linhas
 		}
 		for(i = 0; i<=2; i++)
 		{
-			putchar('¶');
+			putchar('¬¶');
 		}
 		pularlinha();
 	}
@@ -94,7 +95,7 @@ ui_mid_custom(int i) // linha do mid customizada
 		printTime();
 		for(i = 0; i<=2; i++)
 		{
-			putchar('¶');
+			putchar('¬¶');
 		}
 		for(i = 0; i<=60; i++)
 		{
@@ -102,7 +103,7 @@ ui_mid_custom(int i) // linha do mid customizada
 		}
 		for(i = 0; i<=2; i++)
 		{
-			putchar('¶');
+			putchar('¬¶');
 		}
 		pularlinha();
 }
@@ -111,11 +112,11 @@ ui_mid_custom(int i) // linha do mid customizada
 ///////   Fuctions de interface basica   ///////
 ////////////////////////////////////////////////
 
-ui_start(int i) // comeÁa nova linha
+ui_start(int i) // come√ßa nova linha
 {
 	for(i = 0; i<=2; i++)
 	{
-		putchar('¶');
+		putchar('¬¶');
 	}
 	for(i = 0; i<=4; i++)
 	{
@@ -131,7 +132,7 @@ ui_end(int i) // finaliza linha
 	}
 	for(i = 0; i<=2; i++)
 	{
-		putchar('¶');
+		putchar('¬¶');
 	}
 	pularlinha();
 }
@@ -144,16 +145,16 @@ ui_end_q(int i) // finaliza linha
 	}
 	for(i = 0; i<=2; i++)
 	{
-		putchar('¶');
+		putchar('¬¶');
 	}
 	pularlinha();
 }
 
-ui_start_q(int i) // comeÁa nova linha
+ui_start_q(int i) // come√ßa nova linha
 {
 	for(i = 0; i<=2; i++)
 	{
-		putchar('¶');
+		putchar('¬¶');
 	}
 	for(i = 0; i<=11; i++)
 	{
@@ -161,7 +162,7 @@ ui_start_q(int i) // comeÁa nova linha
 	}
 }
 
-ui_center(int i) // comeÁa nova linha
+ui_center(int i) // come√ßa nova linha
 {
 	for(i = 0; i<=15; i++)
 	{
@@ -170,7 +171,7 @@ ui_center(int i) // comeÁa nova linha
 }
 
 ////////////////////////////////////////////////
-///////  Fuctions de interface AvanÁada  ///////
+///////  Fuctions de interface Avan√ßada  ///////
 ////////////////////////////////////////////////
 
 ui_texto(int i, char texto[200])	//inicia o construtor
@@ -292,9 +293,9 @@ ui_question(int i, char question[30])
 }
 
 ////////////////////////////////////////////////
-///////        Fuction de opÁıes         ///////
+///////        Fuction de op√ß√µes         ///////
 ////////////////////////////////////////////////
-// opÁ„o 1 e 2
+// op√ß√£o 1 e 2
 ui_options(int i, char op1[20],char op2[20])
 {
 	int z, x;
@@ -317,7 +318,7 @@ ui_options(int i, char op1[20],char op2[20])
 	}
 	ui_end(i);
 }
-// opÁ„o 3 e 4
+// op√ß√£o 3 e 4
 ui_options_2(int i, char op1[20],char op2[20]) 
 {
 	int z, x;
@@ -472,31 +473,31 @@ ui_builder_ask(int i,char texto[200], char question[30]){ //entra variavel para 
 int main(void)
 {
 	setlocale(LC_ALL, "");
-	ui_builder_ask(i, "Ol·, qual seu nome de Foragido?", "Digite seu nome abaixo:");
+	ui_builder_ask(i, "Ol√°, qual seu nome de Foragido?", "Digite seu nome abaixo:");
 	scanf("%s", nome);
 	char bemvindo[80] =  "Bem vindo ao Jogo Tunnel tails, ";
 	strcat(bemvindo, nome );
-	strcat(bemvindo,"      Um Jogo de uma fuga de pris„o...");
+	strcat(bemvindo,"      Um Jogo de uma fuga de pris√£o...");
 	for(;;){
 			menu_principal: opcao = "", escolha ="", caminho = "", pick = ""; // zera todas variaveis
-			ui_builder(i,bemvindo, ask_select, "Jogar?", "OpÁıes", "Sobre", "Sair ...");
+			ui_builder(i,bemvindo, ask_select, "Jogar?", "Op√ß√µes", "Sobre", "Sair ...");
 			scanf("%c", &opcao);
 			if(opcao == '1'){ // para iniciar
-				ui_builder_ask(i, "Bem Vindo, Esse jogo se passa em uma pris„o de alta seguranÁa em 10 de maio de 1968, vocÍ ser· um foragido que cavou um burado em sua sela e fugiu por tuneis dos esgotos ...", ask_continuar);
+				ui_builder_ask(i, "Bem Vindo, Esse jogo se passa em uma pris√£o de alta seguran√ßa em 10 de maio de 1968, voc√™ ser√° um foragido que cavou um burado em sua sela e fugiu por tuneis dos esgotos ...", ask_continuar);
 				getch();
-				ui_builder_ask(i, "FaÁa oque achar melhor, e suas escolhas te levar„o ou para a fuga, ou para a sua morte ...", ask_continuar);
+				ui_builder_ask(i, "Fa√ßa oque achar melhor, e suas escolhas te levar√£o ou para a fuga, ou para a sua morte ...", ask_continuar);
 				getch();
-				escolha: ui_builder_ask(i, "Sabendo disso, tenha boa sorte Foragido,  lembrando que seu progresso n„o È salvo.                   O JOGO IR¡ INICIAR", ask_continuar);
+				escolha: ui_builder_ask(i, "Sabendo disso, tenha boa sorte Foragido,  lembrando que seu progresso n√£o √© salvo.                   O JOGO IR√Å INICIAR", ask_continuar);
 				getch();
 				escolha = 'i';
 				break;
 			}
-			else if(opcao == '2'){ // OpÁıes
-				ui_builder_ask(i,"OpÁ„o ainda n„o desenvolvida, pois o desenvolvedor ou n„o teve muito tempo para fazer algo mais      complexo, ou È muito vagabundo.", ask_continuar);
+			else if(opcao == '2'){ // Op√ß√µes
+				ui_builder_ask(i,"Op√ß√£o ainda n√£o desenvolvida, pois o desenvolvedor ou n√£o teve muito tempo para fazer algo mais      complexo, ou √© muito vagabundo.", ask_continuar);
 				getch();
 			}
 			else if(opcao == '3') {// Sobre
-				ui_builder_ask(i,"Jogo para Aula do Professor AndrÈ feito especialmente ajuda a aplicar e aprender conhecimentos de    aula. Desenvolvido por F·bio Molliet Segundo ano  de engenharia da ComputaÁ„o. Projeto no GitHub...", ask_continuar);
+				ui_builder_ask(i,"Jogo para Aula do Professor Andr√© feito especialmente ajuda a aplicar e aprender conhecimentos de    aula. Desenvolvido por F√°bio Molliet Segundo ano  de engenharia da Computa√ß√£o. Projeto no GitHub...", ask_continuar);
 				getch();
 			}
 			else if(opcao == '4'){ // sai do programa e finaliza
@@ -515,18 +516,18 @@ int main(void)
 		for(;;)
 		{
 			if(escolha == 'i') {
-				ui_builder_ask(i, "VocÍ acorda ainda sonolento vÍ seus parceiros est„o escapando por um buraco no ch„o da cela...", ask_continuar);
+				ui_builder_ask(i, "Voc√™ acorda ainda sonolento v√™ seus parceiros est√£o escapando por um buraco no ch√£o da cela...", ask_continuar);
 				getch();
-				inicio: ui_builder(i, "Ao tentar se levantar vocÍ fica meio desequilibrado...", ask_fazer, "Pular Junto?", "Chamar o guarda?", ask_dis, ask_menu);
+				inicio: ui_builder(i, "Ao tentar se levantar voc√™ fica meio desequilibrado...", ask_fazer, "Pular Junto?", "Chamar o guarda?", ask_dis, ask_menu);
 				scanf("%c", &escolha);
 			}
 			else if(escolha == '1'){
-				ui_builder_big(i, "Ao cair vocÍ percebe que o buraco est· lotado de entulhos", ask_fazer, "tentar descer segurando", "descer com tudo...", ask_dis, ask_menu);
+				ui_builder_big(i, "Ao cair voc√™ percebe que o buraco est√° lotado de entulhos", ask_fazer, "tentar descer segurando", "descer com tudo...", ask_dis, ask_menu);
 				scanf("%c", &pick);
 				break;
 			}
 			else if(escolha == '2'){
-				ui_builder_ask(i, "Os Guardas chegam e te pegam no flagram no buraco pe culpando, Dia Seguinte grande noticia do jornal 'Grande rebeli„o Todos os Prisoneiros foram executados ...'", ask_continuar);
+				ui_builder_ask(i, "Os Guardas chegam e te pegam no flagram no buraco pe culpando, Dia Seguinte grande noticia do jornal 'Grande rebeli√£o Todos os Prisoneiros foram executados ...'", ask_continuar);
 				getch();
 				goto morreu;
 			}
@@ -544,20 +545,20 @@ int main(void)
 		for(;;)
 		{
 			 if(pick == '1'){
-				ui_builder_ask(i, "VocÍ acaba cortando suas m„os com algumas pedras mas cai em seguranÁa", ask_continuar);
+				ui_builder_ask(i, "Voc√™ acaba cortando suas m√£os com algumas pedras mas cai em seguran√ßa", ask_continuar);
 				getch();
-				ui_builder_ask(i, "Apesar de seus ferimentos, vocÍ olha para o breu ao seu redor e encontra 2 caminhos...", ask_continuar);
+				ui_builder_ask(i, "Apesar de seus ferimentos, voc√™ olha para o breu ao seu redor e encontra 2 caminhos...", ask_continuar);
 				getch();	
-				inicio2: ui_builder(i, "... VocÍ escuta algums sons vindos da direita e muitos outros vindo da esquerda...", ask_seguir, "direita", "esquerda", ask_dis, ask_menu);
+				inicio2: ui_builder(i, "... Voc√™ escuta algums sons vindos da direita e muitos outros vindo da esquerda...", ask_seguir, "direita", "esquerda", ask_dis, ask_menu);
 				scanf("%c", &caminho);
 				break;
 			}
 			else if(pick == '2'){
-				ui_builder_ask(i, "VocÍ Cai com tudo bate os braÁos e fratura uma das pernas e se levanta sentindo muita dor... vocÍ comeÁa a mancar com a perna direita", ask_continuar);
+				ui_builder_ask(i, "Voc√™ Cai com tudo bate os bra√ßos e fratura uma das pernas e se levanta sentindo muita dor... voc√™ come√ßa a mancar com a perna direita", ask_continuar);
 				getch();
-				ui_builder_ask(i, "Apesar de seus ferimentos, vocÍ olha para o breu ao seu redor e encontra 2 caminhos...", ask_continuar);
+				ui_builder_ask(i, "Apesar de seus ferimentos, voc√™ olha para o breu ao seu redor e encontra 2 caminhos...", ask_continuar);
 				getch();
-				ui_builder(i, "... VocÍ escuta algums sons vindos da direita e muitos outros vindo da esquerda...", ask_seguir, "direita", "esquerda", ask_dis, ask_menu);
+				ui_builder(i, "... Voc√™ escuta algums sons vindos da direita e muitos outros vindo da esquerda...", ask_seguir, "direita", "esquerda", ask_dis, ask_menu);
 				scanf("%c", &caminho);
 				break;
 			}
@@ -575,16 +576,16 @@ int main(void)
 		for(;;)
 		{
 			 if(caminho == '1'){
-			    ui_builder_ask(i, "Ao ir para direita vocÍ encontra alguns prisioneiros tentando abrir um port„o enorme, ent„o vocÍ se aproxima ...", ask_continuar);
+			    ui_builder_ask(i, "Ao ir para direita voc√™ encontra alguns prisioneiros tentando abrir um port√£o enorme, ent√£o voc√™ se aproxima ...", ask_continuar);
 				getch();	
-				inicio3: ui_builder_big(i, "Eles falam que precisam de sua ajuda, para abrir o port„o enorme port„o...", ask_fazer, "Ajudar", "Ignorar e correr", ask_dis, ask_menu);
+				inicio3: ui_builder_big(i, "Eles falam que precisam de sua ajuda, para abrir o port√£o enorme port√£o...", ask_fazer, "Ajudar", "Ignorar e correr", ask_dis, ask_menu);
 				scanf("%c", &feito);
 				break;
 			}
 			else if(caminho == '2' ){
-				ui_builder_ask(i, "Ao ir para esquerda vocÍ os guardas procurando prendendo e massacrando os fugitivosos...", ask_continuar);
+				ui_builder_ask(i, "Ao ir para esquerda voc√™ os guardas procurando prendendo e massacrando os fugitivosos...", ask_continuar);
 				getch();
-				ui_builder_ask(i, "VocÍ tenta fugir mas È tarde de mais, um guarda rapidamente chega em vocÍ e te derruba com uma coronhada fazendo vocÍ ficar inconsciente...",  ask_continuar);
+				ui_builder_ask(i, "Voc√™ tenta fugir mas √© tarde de mais, um guarda rapidamente chega em voc√™ e te derruba com uma coronhada fazendo voc√™ ficar inconsciente...",  ask_continuar);
 				getch();
 				goto morreu;
 			}
@@ -602,22 +603,22 @@ int main(void)
 		for(;;)
 		{
 			 if(feito == '1'){
-			    ui_builder_ask(i, "VocÍs conseguem abrir o port„o facilmente com sua ajudo e vocÍs correm em direÁ„o a uma forte luz ...", ask_continuar);
+			    ui_builder_ask(i, "Voc√™s conseguem abrir o port√£o facilmente com sua ajudo e voc√™s correm em dire√ß√£o a uma forte luz ...", ask_continuar);
 				getch();	
-				ui_builder_ask(i, "VocÍ fica sem ver nada de t„o forte que a luz est·, e vocÍ comeÁa a sentir a brisa fria em seu rosto...", ask_continuar);
+				ui_builder_ask(i, "Voc√™ fica sem ver nada de t√£o forte que a luz est√°, e voc√™ come√ßa a sentir a brisa fria em seu rosto...", ask_continuar);
 				getch();
-				ui_builder_ask(i, "Os foragidos juntos a vocÍ comeÁa a dar gritos de felicidade ... e vocÍ pensa ... 'Acho que n„o' ...", ask_continuar);
+				ui_builder_ask(i, "Os foragidos juntos a voc√™ come√ßa a dar gritos de felicidade ... e voc√™ pensa ... 'Acho que n√£o' ...", ask_continuar);
 				getch();
-				ui_builder_ask(i, "Ao sair do tunel com a luz intensa vocÍ cai em uma area aberta junto aos outros ... era uma emboscada dos guardas.", ask_continuar);
+				ui_builder_ask(i, "Ao sair do tunel com a luz intensa voc√™ cai em uma area aberta junto aos outros ... era uma emboscada dos guardas.", ask_continuar);
 				getch();
 				goto morreu;
 			}
 			else if(feito == '2' ){
-				ui_builder_ask(i, "VocÍ se afasta deles e comeÁa a correr por um longo tunel escuro e umido, com cheiro intenso de secreÁıes humanas", ask_continuar);
+				ui_builder_ask(i, "Voc√™ se afasta deles e come√ßa a correr por um longo tunel escuro e umido, com cheiro intenso de secre√ß√µes humanas", ask_continuar);
 				getch();
-				ui_builder_ask(i, "VocÍ continua seguindo o caminho escuro, nisso vocÍ escuta sons de cachorros vindo de onde vocÍ estava anteriormente...",  ask_continuar);
+				ui_builder_ask(i, "Voc√™ continua seguindo o caminho escuro, nisso voc√™ escuta sons de cachorros vindo de onde voc√™ estava anteriormente...",  ask_continuar);
 				getch();
-				inicio4: ui_builder_big(i, "Os barulhos aumentam, vocÍ olha na imensid„o do breu e nota pelo som dos latidos ecoar mais forte a aproximaÁ„o deles", ask_fazer, "Tentar Lutar?", "Correr deles!", ask_dis, ask_menu);
+				inicio4: ui_builder_big(i, "Os barulhos aumentam, voc√™ olha na imensid√£o do breu e nota pelo som dos latidos ecoar mais forte a aproxima√ß√£o deles", ask_fazer, "Tentar Lutar?", "Correr deles!", ask_dis, ask_menu);
 				scanf("%c", &corrida);
 				break;
 			}
@@ -635,18 +636,18 @@ int main(void)
 		for(;;)
 		{
 			 if(corrida == '1'){
-			    ui_builder_ask(i, "Ao tentar lutar contra eles, sem ver nada por causa da escurid„o, vocÍ È mordido tendo seu braÁo mutilado", ask_continuar);
+			    ui_builder_ask(i, "Ao tentar lutar contra eles, sem ver nada por causa da escurid√£o, voc√™ √© mordido tendo seu bra√ßo mutilado", ask_continuar);
 				getch();	
-				ui_builder_ask(i, "Os cachorros s„o fortes e treinados para a situaÁ„o ... e vocÍ acaba notando os guardas chegando pelas lanternas no fim do tunel.", ask_continuar);
+				ui_builder_ask(i, "Os cachorros s√£o fortes e treinados para a situa√ß√£o ... e voc√™ acaba notando os guardas chegando pelas lanternas no fim do tunel.", ask_continuar);
 				getch();
-				ui_builder_ask(i, "Ent„o ao conseguir se livrar dos cachorros j· È tarde de mais e os guardas te capturam...", ask_continuar);
+				ui_builder_ask(i, "Ent√£o ao conseguir se livrar dos cachorros j√° √© tarde de mais e os guardas te capturam...", ask_continuar);
 				getch();
 				goto morreu;
 			}
 			else if(corrida == '2' ){
-				ui_builder_ask(i, "Ent„o vocÍ tenta correr como se n„o houvesse amanh„ ... porem seus ferimentos te limitam ...",  ask_continuar);
+				ui_builder_ask(i, "Ent√£o voc√™ tenta correr como se n√£o houvesse amanh√£ ... porem seus ferimentos te limitam ...",  ask_continuar);
 				getch();
-				inicio5: ui_builder_big(i, "Logo a frente vocÍ nota uma pequena iluminaÁ„o em outro fim do corredor, e por estar se guiando pela parede no escuro vocÍ encontra um pequeno v„o ...", ask_fazer, "Tenta entrar no v„o", "Vai para a luz", ask_dis, ask_menu);
+				inicio5: ui_builder_big(i, "Logo a frente voc√™ nota uma pequena ilumina√ß√£o em outro fim do corredor, e por estar se guiando pela parede no escuro voc√™ encontra um pequeno v√£o ...", ask_fazer, "Tenta entrar no v√£o", "Vai para a luz", ask_dis, ask_menu);
 				scanf("%c", &quase);
 				break;
 			}
@@ -664,22 +665,22 @@ int main(void)
 		for(;;)
 		{
 			 if(quase == '1'){
-			 	ui_builder_ask(i, "O v„o È apertado como se fosse uma rachadura, vocÍ via se esgueirando pelo mesmo ...",  ask_continuar);
+			 	ui_builder_ask(i, "O v√£o √© apertado como se fosse uma rachadura, voc√™ via se esgueirando pelo mesmo ...",  ask_continuar);
 				getch();
-				ui_builder_ask(i, "VocÍ percebe que os cachorros passam direto e vocÍ respira aliviado ...",  ask_continuar);
+				ui_builder_ask(i, "Voc√™ percebe que os cachorros passam direto e voc√™ respira aliviado ...",  ask_continuar);
 				getch();
-			 	ui_builder_ask(i, "Nesse pequeno v„o fica um quente pois vocÍ estava correndo e o ambiente fechado fazendo ficar mais quente ...", ask_continuar);
+			 	ui_builder_ask(i, "Nesse pequeno v√£o fica um quente pois voc√™ estava correndo e o ambiente fechado fazendo ficar mais quente ...", ask_continuar);
 			 	getch();
-			 	ui_builder_ask(i, "VocÍ continua se esgueirando e sente uma brisa fria bater em sua cabeÁa, um buraco antigo cavado a muito tempo",  ask_continuar);
+			 	ui_builder_ask(i, "Voc√™ continua se esgueirando e sente uma brisa fria bater em sua cabe√ßa, um buraco antigo cavado a muito tempo",  ask_continuar);
 				getch();
-				ui_builder_ask(i, "Ent„o vocÍ se aperta e cai ao lado de fora dos muros em uma area n„o visivel pelas torres da pris„o ...",  ask_continuar);
+				ui_builder_ask(i, "Ent√£o voc√™ se aperta e cai ao lado de fora dos muros em uma area n√£o visivel pelas torres da pris√£o ...",  ask_continuar);
 				getch();
 				goto viveu;
 			}
 			else if(quase == '2' ){
-				ui_builder_ask(i, "VocÍ corre atÈ a area iluminada dando uma curna acentuada no tunel...",  ask_continuar);
+				ui_builder_ask(i, "Voc√™ corre at√© a area iluminada dando uma curna acentuada no tunel...",  ask_continuar);
 				getch();
-				ui_builder_ask(i, "Quando vocÍ vira ela vocÍ se d· de frente com uma grade, de metal fundido, a qual fechada ... È o seu fim ",  ask_continuar);
+				ui_builder_ask(i, "Quando voc√™ vira ela voc√™ se d√° de frente com uma grade, de metal fundido, a qual fechada ... √© o seu fim ",  ask_continuar);
 				getch();
 				ui_builder_ask(i, "Os cachorros se aproxima e te prendem sendo bastante agressivos, enquanto os guardas chegam ...",  ask_continuar);
 				getch();
@@ -701,32 +702,19 @@ int main(void)
 		if(morrer == 's')
 		{
 			morreu: kit_completo();
-			ui_builder_ask(i, "VocÍ morreu, executado pelos guardas dia 12 de maio de 1968, em uma parede de fuzilamento...", "Clique para voltar para o menu principal...");
+			ui_builder_ask(i, "Voc√™ morreu, executado pelos guardas dia 12 de maio de 1968, em uma parede de fuzilamento...", "Clique para voltar para o menu principal...");
 			getch();
 			goto menu_principal;
 		}
 		else if(morrer == 'n')
 		{
 			viveu: kit_completo();
-			ui_builder_ask(i, "VocÍ sobreviveu ... e conseguiu escapar da pris„o, parabÈns vocÍ venceu o jogo ...", "Clique para voltar para o menu principal...");
+			ui_builder_ask(i, "Voc√™ sobreviveu ... e conseguiu escapar da pris√£o, parab√©ns voc√™ venceu o jogo ...", "Clique para voltar para o menu principal...");
 			getch();
 			goto menu_principal;
 		}
 	// variavles  ask_dis, ask_menu, ask_erro, ask_voltar, ask_continuar
 	///////// Functions dos builders	
-	/*
-	Proposta:
-	-Prision break em tunels 
-	-persoangem  an„o  (D&D)
--Stealth ? 
--Loud
-- Algum personagem ao longo do caminho para ser sacrificio 
-- "combate"
-- monstro perseguindo o prisioneiro, talvez um "stalker"(criatura invisivel) 
-- tunels trancados
--todos os finais terminam com a morte do personagem de alguma forma tragica 
-A morte È inevitavel (EDGE BOY)
--Oportunidade da fuga: Personagem È um "badass" e graÁas a sua caracteristica racial (resilencia) ele consegue matar um guarda e se armar com os equip dele (Ao menos as armas KKJ)*/
 	// ui_builder(i, texto, pergunta, op1, op 2, op 3 , op 4)  /// ask_fazer ask_select
 	// ui_builder_2(i, texto, pergunta, op1, op 2 )            /// ask_fazer ask_select
 	//ui_builder_big(i, texto, pergunta, op1, op 2 ) 
